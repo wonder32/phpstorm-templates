@@ -1,0 +1,32 @@
+<templateSet group="Stefan">
+  <template name="pred" value="echo '&lt;pre&gt;';&#10;var_dump($END$);&#10;echo '&lt;/pre&gt;';" description="echo var_dump" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="prem" value="echo '&lt;pre&gt;';&#10;print_r($END$);&#10;echo '&lt;/pre&gt;';" description="echo print_r" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="premlog" value="error_log(print_r($END$, true));" description="errorl_log optional array" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="jvscr" value="(function ($, root, undefined) {&#10;&#10;    'use strict';&#10;&#10;&#10;    /*&#10;     *      DOCUMENT READY&#10;     */&#10;&#10;    jQuery(document).ready(function () {&#10;&#10;    })&#10;&#10;})(jQuery, this);" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="preson" value="error_log(&quot;test\n&quot; . json_encode($END$, JSON_PRETTY_PRINT));" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="predlog" value="    ob_start();                    // start buffer capture&#10;    var_dump( $END$ );           // dump the values&#10;    $contents = ob_get_contents(); // put the buffer into a variable&#10;    ob_end_clean();                // end capture&#10;    error_log( $contents ); " description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
